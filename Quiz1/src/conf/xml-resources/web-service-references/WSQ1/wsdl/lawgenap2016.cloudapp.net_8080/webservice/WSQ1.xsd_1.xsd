@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://wees/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://wees/">
+
+<xs:element name="Mystery0" type="tns:Mystery0" />
+
+<xs:element name="Mystery0Response" type="tns:Mystery0Response" />
+
+<xs:element name="Mystery1" type="tns:Mystery1" />
+
+<xs:element name="Mystery1Response" type="tns:Mystery1Response" />
+
+<xs:element name="Mystery2" type="tns:Mystery2" />
+
+<xs:element name="Mystery2Response" type="tns:Mystery2Response" />
+
+<xs:element name="Mystery3" type="tns:Mystery3" />
+
+<xs:element name="Mystery3Response" type="tns:Mystery3Response" />
+
+<xs:element name="Mystery4" type="tns:Mystery4" />
+
+<xs:element name="Mystery4Response" type="tns:Mystery4Response" />
+
+<xs:element name="Mystery5" type="tns:Mystery5" />
+
+<xs:element name="Mystery5Response" type="tns:Mystery5Response" />
+
+<xs:element name="Mystery6" type="tns:Mystery6" />
+
+<xs:element name="Mystery6Response" type="tns:Mystery6Response" />
+
+<xs:element name="Mystery7" type="tns:Mystery7" />
+
+<xs:element name="Mystery7Response" type="tns:Mystery7Response" />
+
+<xs:element name="Mystery8" type="tns:Mystery8" />
+
+<xs:element name="Mystery8Response" type="tns:Mystery8Response" />
+
+<xs:element name="Mystery9" type="tns:Mystery9" />
+
+<xs:element name="Mystery9Response" type="tns:Mystery9Response" />
+
+<xs:complexType name="Mystery0">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery0Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery1">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery1Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery2">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery2Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery3">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery3Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery4">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery4Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery5">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery5Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery6">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery6Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery7">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery7Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery8">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery8Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery9">
+<xs:sequence>
+<xs:element name="parameter1" type="xs:int" />
+<xs:element name="parameter2" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Mystery9Response">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

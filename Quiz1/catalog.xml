@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://lawgenap2016.cloudapp.net:8080/webservice/WSQ1?wsdl" uri="src/conf/xml-resources/web-service-references/WSQ1/wsdl/lawgenap2016.cloudapp.net_8080/webservice/WSQ1.wsdl"/>
+    <system systemId="http://lawgenap2016.cloudapp.net:8080/webservice/WSQ1?xsd=1" uri="src/conf/xml-resources/web-service-references/WSQ1/wsdl/lawgenap2016.cloudapp.net_8080/webservice/WSQ1.xsd_1.xsd"/>
+</catalog>
