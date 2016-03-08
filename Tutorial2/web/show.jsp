@@ -1,8 +1,3 @@
-<%-- 
-    Document   : show
-    Created on : Mar 7, 2016, 5:01:51 PM
-    Author     : m.prakash
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.*"%>
@@ -16,23 +11,21 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/cover.min.css" >
     </head>
-    <%      
-            String id = request.getParameter("id");
-            String query = "SELECT * FROM tutorial_2 WHERE id='" + id +"'";
-            Class.forName("com.mysql.jdbc.Driver");
-            String userName = "law2016";
-            String password = "zH4E6Dxdw5cuJ7ex";
-            String url = "jdbc:mysql://localhost/law2016";
-            Connection connection = DriverManager.getConnection(url, userName, password);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-            ResultSetMetaData metaData = resultSet.getMetaData();
-            int numberOfColumns = metaData.getColumnCount();
-            String [] header = new String [3];
-            header[0] = "Nama";
-            header[1] = "Telepon";
-            header[2] = "Email";
-            resultSet.next();
+    <%
+        String id = request.getParameter("id");
+        String query = "SELECT * FROM tutorial_2 WHERE id='" + id +"'";
+        Class.forName("com.mysql.jdbc.Driver");
+        String userName = "law2016";
+        String password = "zH4E6Dxdw5cuJ7ex";
+        String url = "jdbc:mysql://localhost/law2016";
+        Connection connection = DriverManager.getConnection(url, userName, password);
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+        String [] header = new String [3];
+        header[0] = "Nama";
+        header[1] = "Telepon";
+        header[2] = "Email";
+        resultSet.next();
     %>
     <body>
         <div class="site-wrapper">
@@ -42,11 +35,13 @@
                       <div class="inner">
                           <h3 class="masthead-brand">Tutorial 2</h3>
                           <nav class="nav nav-masthead">
-                              <a class="nav-link active" href="index.jsp">Home</a>
+                              <a class="nav-link" href="index.jsp">Home</a>
+                              <a class="nav-link" href="new.jsp">Add Contact</a>
                           </nav>
                       </div>
                   </div>
                   <div class="inner cover">
+                     <h1 class="cover-heading">Contact</h1>
                      <table class="table">
                           <tbody>
                             <% for(int i = 2; i <= 4; i++) { 
@@ -69,16 +64,16 @@
                               <th scope="row">Alamat</th>
                               <td><% out.print(alamat);%></td>
                             </tr>
-                            <% if(resultSet.getObject(10) != null){ %>
+                            <% if(resultSet.getObject(11) != null){ %>
                             <tr>
                               <th scope="row"><% out.print(resultSet.getObject(11));%></th>
                               <td><% out.print(resultSet.getObject(10));%></td>
                             </tr>
                             <% } %>
-                            <% if(resultSet.getObject(11) != null){ %>
+                            <% if(resultSet.getObject(13) != null){ %>
                             <tr>
-                              <th scope="row"><% out.print(resultSet.getObject(11));%></th>
-                              <td><% out.print(resultSet.getObject(10));%></td>
+                              <th scope="row"><% out.print(resultSet.getObject(13));%></th>
+                              <td><% out.print(resultSet.getObject(12));%></td>
                             </tr>
                             <% } %>
                           </tbody>

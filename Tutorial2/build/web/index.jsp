@@ -10,19 +10,20 @@
         <title>Tutorial 2</title>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/cover.min.css" >
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     </head>
     <%
-            String query = "SELECT id, nama, telepon, email FROM tutorial_2";
-            Class.forName("com.mysql.jdbc.Driver");
-            String userName = "law2016";
-            String password = "zH4E6Dxdw5cuJ7ex";
-            String url = "jdbc:mysql://localhost/law2016";
-            Connection connection = DriverManager.getConnection(url, userName, password);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
-            ResultSetMetaData metaData = resultSet.getMetaData();
-            int numberOfColumns = metaData.getColumnCount();
-        %>
+        String query = "SELECT id, nama, telepon, email FROM tutorial_2";
+        Class.forName("com.mysql.jdbc.Driver");
+        String userName = "law2016";
+        String password = "zH4E6Dxdw5cuJ7ex";
+        String url = "jdbc:mysql://localhost/law2016";
+        Connection connection = DriverManager.getConnection(url, userName, password);
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+        ResultSetMetaData metaData = resultSet.getMetaData();
+        int numberOfColumns = metaData.getColumnCount();
+    %>
     <body>
         <div class="site-wrapper">
           <div class="site-wrapper-inner">
@@ -32,6 +33,7 @@
                           <h3 class="masthead-brand">Tutorial 2</h3>
                           <nav class="nav nav-masthead">
                               <a class="nav-link active" href="index.jsp">Home</a>
+                              <a class="nav-link" href="new.jsp">Add Contact</a>
                           </nav>
                       </div>
                   </div>
@@ -44,13 +46,14 @@
                                   <th>Nama</th>
                                   <th>Telepon</th>
                                   <th>Email</th>
+                                  <th>Edit</th>
                             </tr>
                           </thead>
                           <tbody>
-                              <% while (resultSet.next()) { %><tr>
+                              <% while (resultSet.next()) { String tmp = ""; %><tr>
                               <% for (int i = 2; i <= numberOfColumns; i++) { %>            
-                              <td> <% if(i==2) {%><a href="show.jsp?id=<% out.print(resultSet.getObject(1)); %>"><%out.print(resultSet.getObject(i));%></a><%} else {out.print(resultSet.getObject(i));} %> </td>
-                              <% } %></tr><% } %>
+                              <td> <% if(i==2) {%><a href="show.jsp?id=<% tmp += resultSet.getObject(1); out.print(tmp); %>"><%out.print(resultSet.getObject(i));%></a><%} else {out.print(resultSet.getObject(i));} %> </td>
+                              <% } %><td><a href="edit.jsp?id=<% out.print(tmp); %>"><i class="fa fa-pencil"></i></a></td></tr><% } %>
                           </tbody>
                       </table>
                   </div>
